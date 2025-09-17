@@ -81,6 +81,25 @@ body[b-b6svqs2a7e] {
     vertical-align: top;
 }
 
+/*Practice Types*/
+.Wailers[b-b6svqs2a7e] {
+    background: #189229;
+    color: white;
+}
+.Banshees[b-b6svqs2a7e] {
+    background: #e0d054;
+}
+.League[b-b6svqs2a7e] {
+    background: #3554d0;
+    color: white;
+}
+.Rookies[b-b6svqs2a7e] {
+    background: #fa5252;
+}
+.Scrimmage[b-b6svqs2a7e] {
+    background: #42d8ed;
+}
+
     /*.days li {
         list-style-type: none;
         display: inline-block;
@@ -97,8 +116,8 @@ body[b-b6svqs2a7e] {
             background: #1abc9c;
             color: white !important
         }*/
-/* /Components/CreateCalendarItem.razor.rz.scp.css */
-.container[b-adtnbhotit] {
+/* /Components/CalendarItemView.razor.rz.scp.css */
+.container[b-j68t3b553h] {
     padding: 10px; /*inner*/
     border-radius: 5px;
     background: #7498d0;
@@ -114,11 +133,11 @@ body[b-b6svqs2a7e] {
     vertical-align: top;
 }
 
-.body[b-adtnbhotit] {
+.body[b-j68t3b553h] {
     text-align: left;
 }
 
-.header[b-adtnbhotit] {
+.header[b-j68t3b553h] {
     height: 15%;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
