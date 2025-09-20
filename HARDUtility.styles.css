@@ -1,144 +1,115 @@
-/* /Components/Calendar.razor.rz.scp.css */
-ul[b-b6svqs2a7e] {
-    list-style-type: none;
-}
-
-body[b-b6svqs2a7e] {
-    font-family: Verdana, sans-serif;
-}
-
-/* Month header */
-.month[b-b6svqs2a7e] {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-    text-align: center;
-}
-
-    /* Month list */
-    .month ul[b-b6svqs2a7e] {
-        margin: 0;
-        padding: 0;
-    }
-
-        .month ul li[b-b6svqs2a7e] {
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-    /* Previous button inside month header */
-    .month .prev[b-b6svqs2a7e] {
-        float: left;
-        padding-top: 10px;
-    }
-
-    /* Next button */
-    .month .next[b-b6svqs2a7e] {
-        float: right;
-        padding-top: 10px;
-    }
-
-/* Weekdays (Mon-Sun) */
-.weekdays[b-b6svqs2a7e] {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-}
-
-    .weekdays li[b-b6svqs2a7e] {
-        display: inline-block;
-        width: 13.6%;
-        color: #666;
-        text-align: center;
-    }
-
-.dayholder[b-b6svqs2a7e] {
-    padding: 10px;
-    padding-bottom: 22px;
-    padding-left: 25px;
-    background: #4800ff;
-    color: #000000;
-    width: 100%;
-    height: 600px;
-}
-
-/* Days (1-31) */
-.days[b-b6svqs2a7e] {
-    padding: 10px; /*inner*/
-    border-radius: 5px;
-    background: #eee;
-    margin: 0;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    display: inline-block;
-    width: 13.6%;
-    height: 19%;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: right;
-    vertical-align: top;
-}
-
-/*Practice Types*/
-.Wailers[b-b6svqs2a7e] {
-    background: #189229;
-    color: white;
-}
-.Banshees[b-b6svqs2a7e] {
-    background: #e0d054;
-}
-.League[b-b6svqs2a7e] {
-    background: #3554d0;
-    color: white;
-}
-.Rookies[b-b6svqs2a7e] {
-    background: #fa5252;
-}
-.Scrimmage[b-b6svqs2a7e] {
-    background: #42d8ed;
-}
-
-    /*.days li {
-        list-style-type: none;
-        display: inline-block;
-        width: 13.6%;
-        text-align: center;
-        margin-bottom: 5px;
-        font-size: 12px;
-        color: #777;
-    }*/
-
-        /* Highlight the "current" day */
-        /*.days li .active {
-            padding: 5px;
-            background: #1abc9c;
-            color: white !important
-        }*/
 /* /Components/CalendarItemView.razor.rz.scp.css */
 .container[b-j68t3b553h] {
-    padding: 10px; /*inner*/
+    padding: 5px; /*inner*/
     border-radius: 5px;
-    background: #7498d0;
+    background: #c2cfd3;
     margin: 0;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    display: flex;
+    display: block;
     width: 100%;
-    height: 300px;
     font-size: 16px;
     font-weight: bold;
     text-align: right;
-    vertical-align: top;
+    vertical-align: central;
+    position: relative;
+    overflow: hidden;
 }
 
 .body[b-j68t3b553h] {
-    text-align: left;
+    text-align: left;    
+}
+.date[b-j68t3b553h] {
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: -5px;
+}
+
+.top[b-j68t3b553h] {
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.track[b-j68t3b553h] {
+    background: #b4ccd7;
+    display: inline-block;
+    width: 49%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.med[b-j68t3b553h] {
+    background: #c9e0e4;
+    display: flex;
+    width: 49%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.save[b-j68t3b553h] {
+/*    background: #808080;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;*/
+    float: right;
+    margin-right: 9px;
+    padding: 5px;
+    /*    align-content: flex-end;
+    float: right;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;*/
+}
+
+.closebutton[b-j68t3b553h] {
+    position: absolute;
+    right: 3px;
 }
 
 .header[b-j68t3b553h] {
-    height: 15%;
+    height: 8%;
+    width: 100%;
+    background: #b4ccd7;
+    border-bottom: solid;
+    border-width: 3px;
+    text-align: left;
+}
+
+.notes[b-j68t3b553h] {
+    width: 100%;
+    font-size: 13px;
+    margin-left: 10px;
+}
+/* /Components/DropDown.razor.rz.scp.css */
+.dropholder[b-awgruuy85e] {
+    display: block;
+    /*background: #ffd800;*/ /*yellow*/
+    padding: 10px;
+    margin: 1px;
+    width: 100%;
+    /*align-content: center;*/
+    font-size: 13px;
+}
+
+.drop[b-awgruuy85e] {
+    /*background: #f67fcf;*/ /*pink*/
+    display: flex;
+    padding: 10px;
+    /*align-content: center;*/
+    margin-left: 2px;
+    font-size: 13px;
+    width: 75%;
+}
+.droplabel[b-awgruuy85e] {
+    width: 80%;
+    display: block;
+    /*background: #11963d;*/ /*green*/
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-24h9dwy28o] {
@@ -302,3 +273,161 @@ main[b-24h9dwy28o] {
         overflow-y: auto;
     }
 }
+/* /Pages/Calendar.razor.rz.scp.css */
+ul[b-gpk3qcwo7x] {
+    list-style-type: none;
+}
+
+body[b-gpk3qcwo7x] {
+    font-family: Verdana, sans-serif;
+}
+
+.starttoggle[b-gpk3qcwo7x] {
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    bottom: 1px;
+    color: white;
+}
+
+/* Month header */
+.month[b-gpk3qcwo7x] {
+    padding: 60px 25px;
+    width: 100%;
+    background: #2e3a89;
+    text-align: center;
+    height: 150px;
+    font-size: 38px;
+}
+
+    /* Month list */
+    .month ul[b-gpk3qcwo7x] {
+        margin: 0;
+        padding: 0;
+    }
+
+        .month ul li[b-gpk3qcwo7x] {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+    /* Previous button inside month header */
+    .month .prev[b-gpk3qcwo7x] {
+        float: left;
+        padding-top: 10px;
+    }
+
+    /* Next button */
+    .month .next[b-gpk3qcwo7x] {
+        float: right;
+        padding-top: 10px;
+    }
+
+/* Weekdays (Mon-Sun) */
+.weekdays[b-gpk3qcwo7x] {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+    .weekdays li[b-gpk3qcwo7x] {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+    }
+
+.dayholder[b-gpk3qcwo7x] {
+    padding: 10px;
+    padding-bottom: 22px;
+    padding-left: 25px;
+    background: #2e3a89;
+    color: #000000;
+    width: 100%;
+    height: 600px;
+}
+
+/* Days (1-31) */
+.days[b-gpk3qcwo7x] {
+    padding: 10px; /*inner*/
+    border-radius: 5px;
+    background: #eee;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 13.6%;
+    height: 19%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+
+/*Practice Types*/
+.practice[b-gpk3qcwo7x] {
+    border-radius: 5px;
+    font-weight: normal;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.Wailers[b-gpk3qcwo7x] {
+    background: #189229;
+    color: white;
+}
+.Banshees[b-gpk3qcwo7x] {
+    background: #e0d054;
+}
+.League[b-gpk3qcwo7x] {
+    background: #3554d0;
+    color: white;
+}
+.Rookies[b-gpk3qcwo7x] {
+    background: #fa5252;
+}
+.Scrimmage[b-gpk3qcwo7x] {
+    background: #42d8ed;
+}
+
+.notif[b-gpk3qcwo7x] {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 20%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 2px;
+    font-weight: bold;
+    word-wrap: anywhere;
+    
+}
+
+.notif-trainer[b-gpk3qcwo7x] {
+    background: #e0d054;
+}
+
+.notif-med[b-gpk3qcwo7x] {
+    background: #fe0808;
+}
+
+    /*.days li {
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #777;
+    }*/
+
+        /* Highlight the "current" day */
+        /*.days li .active {
+            padding: 5px;
+            background: #1abc9c;
+            color: white !important
+        }*/
