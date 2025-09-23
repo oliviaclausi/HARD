@@ -465,7 +465,7 @@ body[b-gpk3qcwo7x] {
     background: #fe0808;
 }
 
-.time[b-gpk3qcwo7x] {
+.calendartime[b-gpk3qcwo7x] {
     border: none;
     background: none;
     font-size: 13px;
@@ -560,7 +560,7 @@ body[b-gpk3qcwo7x] {
         min-width: 325px;
     }
 
-    .time[b-gpk3qcwo7x] {
+    .calendartime[b-gpk3qcwo7x] {
         border: none;
         background: none;
         font-size: 10px;
