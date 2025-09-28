@@ -92,13 +92,20 @@
 }
 
 .error[b-j68t3b553h] {
-/*    float: right;*/
-/*    justify-content: right;*/
     font-weight: normal;
     color: red;
     display: inline-block;
     position: absolute;
-    right: 90px;
+    right: 80px;
+    font-size: 13px;
+    width: 250px;
+}
+
+.irregularpractice[b-j68t3b553h] {
+    font-weight: normal;
+    display: inline-block;
+    font-size: 13px;
+    float: left;
 }
 
 @media (max-width: 641px) {
@@ -473,6 +480,9 @@ body[b-gpk3qcwo7x] {
 
 .notif-med[b-gpk3qcwo7x] {
     background: #fe0808;
+}
+.notif-irregular[b-gpk3qcwo7x] {
+    background: #e156eb;
 }
 
 .calendartime[b-gpk3qcwo7x] {
