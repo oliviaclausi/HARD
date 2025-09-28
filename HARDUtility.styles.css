@@ -91,6 +91,16 @@
     margin-left: 10px;
 }
 
+.error[b-j68t3b553h] {
+/*    float: right;*/
+/*    justify-content: right;*/
+    font-weight: normal;
+    color: red;
+    display: inline-block;
+    position: absolute;
+    right: 90px;
+}
+
 @media (max-width: 641px) {
     .notes[b-j68t3b553h] {
         width: 15%;
