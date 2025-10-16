@@ -1,130 +1,3 @@
-/* /Components/CalendarItemView.razor.rz.scp.css */
-.container[b-j68t3b553h] {
-    padding: 5px; /*inner*/
-    border-radius: 5px;
-    background: #c2cfd3;
-    margin: 0;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: right;
-    vertical-align: central;
-    position: relative;
-    overflow: hidden;
-}
-
-.body[b-j68t3b553h] {
-    text-align: left;    
-}
-.date[b-j68t3b553h] {
-    padding: 5px;
-    font-size: 18px;
-    margin-bottom: -5px;
-}
-
-.top[b-j68t3b553h] {
-    display: flex;
-    padding: 0px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.track[b-j68t3b553h] {
-    background: #b4ccd7;
-    display: inline-block;
-    width: 49%;
-    padding: 5px;
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
-.med[b-j68t3b553h] {
-    background: #c9e0e4;
-    display: flex;
-    width: 49%;
-    padding: 5px;
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-left: 5px;
-}
-
-.save[b-j68t3b553h] {
-/*    background: #808080;
-    padding: 5px;
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;*/
-    float: right;
-    margin-right: 9px;
-    padding: 5px;
-    /*    align-content: flex-end;
-    float: right;
-    position: absolute;
-    bottom: 3px;
-    right: 3px;*/
-}
-
-.closebutton[b-j68t3b553h] {
-    position: absolute;
-    right: 3px;
-}
-
-.header[b-j68t3b553h] {
-    height: 8%;
-    width: 100%;
-    background: #b4ccd7;
-    border-bottom: solid;
-    border-width: 3px;
-    text-align: left;
-}
-
-.notes[b-j68t3b553h] {
-    width: 100%;
-    font-size: 13px;
-    margin-left: 10px;
-}
-.notesinput[b-j68t3b553h] {
-    width: 970%;
-    margin-left: 10px;
-}
-
-.error[b-j68t3b553h] {
-    font-weight: normal;
-    color: red;
-    display: inline-block;
-    position: absolute;
-    right: 80px;
-    font-size: 13px;
-    width: 250px;
-}
-
-.irregularpractice[b-j68t3b553h] {
-    font-weight: normal;
-    display: inline-block;
-    font-size: 13px;
-    float: left;
-}
-
-@media (max-width: 641px) {
-    .notes[b-j68t3b553h] {
-        width: 15%;
-        font-size: 11px;
-        margin-left: 1px;
-    }
-
-    .track[b-j68t3b553h] {
-        background: #b4ccd7;
-        display: inline-block;
-        width: 49%;
-        padding: 10px;
-        border: solid;
-        border-width: 1px;
-        border-radius: 5px;
-    }
-}
 /* /Components/DropDown.razor.rz.scp.css */
 .dropholder[b-awgruuy85e] {
     display: block;
@@ -145,6 +18,15 @@
     font-size: 13px;
     width: 75%;
 }
+    .drop:disabled[b-awgruuy85e] {
+        color: #000000;
+        border: solid;
+        border-width: 1px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
 .droplabel[b-awgruuy85e] {
     width: 80%;
     display: block;
@@ -173,6 +55,325 @@
         font-size: 11px;
         width: 100%;
     }
+}
+/* /Components/EditEvent.razor.rz.scp.css */
+.main[b-yl872a2m04] {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: #c2cfd3;
+    margin: 0;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: central;
+    position: relative;
+    overflow: hidden;
+}
+
+.header[b-yl872a2m04] {
+    height: 8%;
+    width: 100%;
+    background: #b4ccd7;
+    border-bottom: solid;
+    border-width: 3px;
+}
+
+.closebutton[b-yl872a2m04] {
+    float: right;
+}
+
+.body[b-yl872a2m04] {
+}
+
+.date[b-yl872a2m04] {
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: -5px;
+    width: 10%;
+    display: inline-block;
+}
+
+.addnewitem[b-yl872a2m04] {
+    /*    width: 10%;
+    font-size: 10px;
+    display: inline-block;*/
+    float: right;
+    padding: 5px;
+    /*    position: absolute;
+    right: -170px;*/
+}
+
+.eventinfo[b-yl872a2m04] {
+    padding: 10px;
+}
+
+.save[b-yl872a2m04] {
+    float: right;
+    margin-right: 9px;
+    padding: 5px;
+}
+
+[b-yl872a2m04] .inputbox {    
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+    [b-yl872a2m04] .inputbox:disabled {
+        color: #000000;
+        background-color: #c9e0e4;
+        border: solid;
+        border-color: #000000;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+[b-yl872a2m04] .inputboxarea {
+    width: 97%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+    [b-yl872a2m04] .inputboxarea:disabled {
+        color: #000000;
+        background-color: #c9e0e4;
+        border: solid;
+        border-color: #000000;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+/* /Components/EditPractice.razor.rz.scp.css */
+.container[b-2aq42zd2us] {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: #c2cfd3;
+    margin: 0;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: central;
+    position: relative;
+    overflow: hidden;
+}
+
+.body[b-2aq42zd2us] {
+    text-align: left;    
+}
+.date[b-2aq42zd2us] {
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: -5px;
+    width: 10%;
+    display: inline-block;
+}
+
+.addevent[b-2aq42zd2us] {
+/*    width: 10%;
+    font-size: 10px;
+    display: inline-block;*/
+    float: right;
+    padding: 5px;
+    /*    position: absolute;
+    right: -170px;*/
+}
+
+.top[b-2aq42zd2us] {
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.track[b-2aq42zd2us] {
+    background: #b4ccd7;
+    display: inline-block;
+    width: 49%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.med[b-2aq42zd2us] {
+    background: #c9e0e4;
+    display: flex;
+    width: 49%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.save[b-2aq42zd2us] {
+/*    background: #808080;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;*/
+    float: right;
+    margin-right: 9px;
+    padding: 5px;
+    /*    align-content: flex-end;
+    float: right;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;*/
+}
+
+.closebutton[b-2aq42zd2us] {
+    position: absolute;
+    right: 3px;
+}
+
+.header[b-2aq42zd2us] {
+    height: 8%;
+    width: 100%;
+    background: #b4ccd7;
+    border-bottom: solid;
+    border-width: 1.5px;
+    text-align: left;
+}
+
+.notes[b-2aq42zd2us] {
+    width: 100%;
+    font-size: 13px;
+    margin-left: 10px;
+}
+    .notes:disabled[b-2aq42zd2us] {
+        margin-left: 1000px;
+        font-size: 43px;
+    }
+
+.notesinput[b-2aq42zd2us] {
+    width: 970%;
+    margin-left: 10px;
+    background-color: #ffffff;
+}
+
+.error[b-2aq42zd2us] {
+    font-weight: normal;
+    color: red;
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    font-size: 13px;
+    width: 250px;
+}
+
+.irregularpractice[b-2aq42zd2us] {
+    font-weight: normal;
+    display: inline-block;
+    font-size: 13px;
+    float: left;
+}
+
+[b-2aq42zd2us] .inputbox {
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    [b-2aq42zd2us] .inputbox:disabled {
+        color: #000000;
+        background-color: #c9e0e4;
+        border: solid;
+        border-color: #000000;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+[b-2aq42zd2us] .inputboxarea {
+    width: 97%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+    [b-2aq42zd2us] .inputboxarea:disabled {
+        color: #000000;
+        background-color: #c9e0e4;
+        border: solid;
+        border-color: #000000;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+@media (max-width: 641px) {
+    .notes[b-2aq42zd2us] {
+        width: 15%;
+        font-size: 11px;
+        margin-left: 1px;
+    }
+
+    .track[b-2aq42zd2us] {
+        background: #b4ccd7;
+        display: inline-block;
+        width: 49%;
+        padding: 10px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+}
+/* /Components/SelectCalendarItem.razor.rz.scp.css */
+.main[b-iwbvtv17eu] {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: #c2cfd3;
+    margin: 0;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: central;
+    position: relative;
+    overflow: hidden;
+}
+
+.header[b-iwbvtv17eu] {
+    height: 8%;
+    width: 100%;
+    background: #b4ccd7;
+    border-bottom: solid;
+    border-width: 3px;
+}
+.closebutton[b-iwbvtv17eu] {
+    float: right;
+}
+
+.body[b-iwbvtv17eu] {
+
+}
+
+.date[b-iwbvtv17eu] {
+
+}
+
+.existingitem[b-iwbvtv17eu] {
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+.item[b-iwbvtv17eu] {
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: normal;
+    margin: 5px;
+    width: 98.5%;
+    background: #b4ccd7;
+}
+
+.newitem[b-iwbvtv17eu] {
+    padding: 10px;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-24h9dwy28o] {
@@ -429,6 +630,7 @@ body[b-gpk3qcwo7x] {
     font-weight: bold;
     text-align: right;
     vertical-align: top;
+    overflow-y: hidden;
 }
 
 /*Practice Types*/
@@ -483,6 +685,19 @@ body[b-gpk3qcwo7x] {
 }
 .notif-irregular[b-gpk3qcwo7x] {
     background: #e156eb;
+}
+
+.event[b-gpk3qcwo7x] {
+    border-radius: 5px;
+    font-weight: normal;
+    padding-right: 2px;
+    padding-left: 2px;
+    overflow: clip;
+    background: #a99e9e;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-height: 24px;
+    width: 100%;
 }
 
 .calendartime[b-gpk3qcwo7x] {
@@ -589,5 +804,9 @@ body[b-gpk3qcwo7x] {
         display: inline-block;
         padding: 0px;
         margin: -5px;
+    }
+
+    .event[b-gpk3qcwo7x] {
+        max-height: 17px;
     }
 }
