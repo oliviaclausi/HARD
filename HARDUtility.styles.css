@@ -84,7 +84,8 @@
     float: right;
 }
 
-.body[b-yl872a2m04] {
+.top[b-yl872a2m04] {
+    height: 60px;
 }
 
 .date[b-yl872a2m04] {
@@ -107,9 +108,16 @@
 
 .eventinfo[b-yl872a2m04] {
     padding: 10px;
+    margin-top: 10px;
 }
 
 .save[b-yl872a2m04] {
+    float: right;
+    margin-right: 9px;
+    padding: 5px;
+}
+
+.delete[b-yl872a2m04] {
     float: right;
     margin-right: 9px;
     padding: 5px;
@@ -185,6 +193,7 @@
     padding: 0px;
     width: 100%;
     margin-bottom: 5px;
+    height: 80px;
 }
 
 .track[b-2aq42zd2us] {
@@ -222,6 +231,12 @@
     position: absolute;
     bottom: 3px;
     right: 3px;*/
+}
+
+.delete[b-2aq42zd2us] {
+    float: right;
+    margin-right: 9px;
+    padding: 5px;
 }
 
 .closebutton[b-2aq42zd2us] {
@@ -374,6 +389,52 @@
 
 .newitem[b-iwbvtv17eu] {
     padding: 10px;
+}
+/* /Components/TimeSelect.razor.rz.scp.css */
+.time[b-vwl2kcgo64] {
+    width: 49%;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background: #c9e0e4;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+.droplabel[b-vwl2kcgo64] {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.drop[b-vwl2kcgo64] {
+    display: inline-block;
+    margin: 3px;
+}
+    .drop:disabled[b-vwl2kcgo64] {
+        color: #000000;
+        border: solid;
+        border-width: 1px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
+@media (max-width: 770px) {
+    .time[b-vwl2kcgo64] {
+        font-size: 11px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 641px) {
+    .time[b-vwl2kcgo64] {
+        width: 90%;
+        font-size: 11px;
+    }
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-24h9dwy28o] {
