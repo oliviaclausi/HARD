@@ -1,5 +1,6 @@
+/* #region DEFAULT */
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1:focus {
@@ -101,3 +102,575 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+/* #endregion DEFAULT */
+
+/* #region VARIABLES */
+:root {
+    --hard-blue: #2e3a89;
+    --menu-med-blue: #6c75ac;
+    --menu-light-blue: #c0c3db;
+    --menu-header-blue: #5761a0;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.calendar-day {
+    --wailers: #189229;
+    --banshees: #e0d054;
+    --league: #3554d0;
+    --rookies: #fa5252;
+    --scrimmage: #42d8ed;
+    --event: #a99e9e;
+    --trainer: #e0d054;
+    --med: #fe0808;
+    --irregular: #e156eb;
+    --day-color: #c0c3db;
+}
+/* #endregion VARIABLES */
+
+/* #region CALENDAR */
+/* CALENDAR */
+.calendar-header {
+    padding: 60px 25px;
+    width: 100%;
+    background: var(--hard-blue);
+    text-align: center;
+    height: 150px;
+    font-size: .75em;
+    text-shadow: 2px 2px 4px #000000;
+}
+    .calendar-header ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+        .calendar-header ul li {
+            color: white;
+            font-size: 1.75em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+/* Previous button inside month header */
+    .calendar-header .prev {
+        float: left;
+        padding-top: 10px;
+    }
+/* Next button */
+    .calendar-header .next {
+        float: right;
+        padding-top: 10px;
+    }
+
+/* Weekdays (Mon-Sun) */
+.calendar-header-weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+    .calendar-header-weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+    }
+
+.calendar-week-start-toggle {
+    text-align: left;
+    position: relative;
+    bottom: 1px;
+    color: white;
+}
+
+.calendar-body {
+    padding: 10px;
+    padding-bottom: 22px;
+/*    padding-left: 25px;*/
+    background: var(--hard-blue);
+    width: 100%;
+    height: 600px;
+    min-width: 800px;
+/*    max-width: 1000px;*/
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calendar-day {
+    padding: 7px; /*inner*/
+    border-radius: 10px;
+    background: var(--day-color);
+    box-shadow: var(--shadow);
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 13.6%;
+    height: 19%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+    overflow-y: hidden;
+}
+    .calendar-day .time {
+        border: none;
+        background: none;
+        font-size: .75em;
+        font-weight: normal;
+        width: 100%;
+        display: inline-block;
+        padding: 0px;
+        margin: -5px;
+        margin-top: -15px;
+    }
+    .calendar-day .item {
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        font-weight: normal;
+        overflow: clip;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-height: 24px;
+        width: 100%;        
+    }
+    .calendar-day .item .item-text {
+        padding-right: 10px;
+    }
+    .calendar-day .item .practice {
+
+    }
+        .calendar-day .item .practice .Wailers {
+            background: var(--wailers);
+            color: white;
+        }
+        .calendar-day .item .practice .Banshees {
+            background: var(--banshees);
+        }
+        .calendar-day .item .practice .League {
+            background: var(--league);
+            color: white;
+        }
+        .calendar-day .item .practice .Rookies {
+            background: var(--rookies);
+        }
+        .calendar-day .item .practice .Scrimmage {
+            background: var(--scrimmage);
+        }
+    .calendar-day .item .event {
+        background: var(--event);
+    }
+
+    .calendar-day .notification {
+        display: inline-block;
+        box-shadow: var(--shadow);
+        object-fit: contain;
+        float: left;
+        text-align: center;
+        width: 20%;
+        border-radius: 14px;
+        height: 20px;
+        margin-top: 2px;
+        font-weight: bold;
+        word-wrap: anywhere;
+    }
+        .calendar-day .notification .trainer {
+            background: var(--trainer);
+            height: 100%;
+            border-radius: 13px;
+        }
+        .calendar-day .notification .med {
+            background: var(--med);
+            height: 100%;
+            border-radius: 13px;
+        }
+        .calendar-day .notification .irregular {
+            background: var(--irregular);
+            height: 100%;
+            border-radius: 13px;
+        }
+
+@media (max-width: 641px) {
+    .calendar-header {
+        padding: 40px 25px;
+        min-width: 325px;
+    }
+    .calendar-header-weekdays {
+        min-width: 325px;
+    }
+        .calendar-header-weekdays li {
+            width: 12.8%;
+        }
+    .calendar-body {
+        padding-left: 3px;
+        padding-right: 0px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        height: 450px;
+        min-width: 325px;
+    }
+    .calendar-day {
+        padding: 1px; /*inner*/
+        border-radius: 2px;
+        margin-bottom: 5px;
+        margin-right: 4px;
+        min-width: 41px;
+        width: 12.9%;
+        height: 19%;
+        font-weight: bold;
+        font-size: .75em;
+        vertical-align: top;
+        overflow: clip;
+    }
+        .calendar-day .notification {
+            width: 30%;
+            height: 15%;
+            font-size: .75em;
+        }
+        .calendar-day .time {
+            padding-right: 0px;
+            font-size: .75em;
+            overflow: hidden;
+        }
+        .calendar-day .item {
+            max-height: 17px;
+            border-radius: 2px;
+            font-size: .85em;
+        }
+}
+/* #endregion CALENDAR */
+
+/* #region DROPDOWN */
+.dropdown-container {
+    display: block;
+    padding: 10px;
+    margin: 1px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.drop {
+    display: flex;
+    padding: 10px;
+    margin-left: 2px;
+    font-size: 13px;
+    width: 75%;
+}
+
+    .drop:disabled {
+        color: #000000;
+        border: solid;
+        border-width: 1px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
+.dropdown-label {
+    width: 80%;
+    display: block;
+}
+
+@media (max-width: 641px) {
+    .dropdown-container {
+        padding: 0px;
+        font-size: 11px;
+    }
+
+    .drop {
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 11px;
+        width: 100%;
+    }
+}
+/* #endregion DROPDOWN */
+
+/* #region TIMESELECT */
+.time-select {
+    width: 49%;
+    padding: 10px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background: var(--menu-light-blue);
+    display: inline-flex;
+    flex-direction: row;
+    overflow: hidden;
+    font-size: .9em;
+    padding-top: 15px;
+}
+
+    .time-select .time {
+        display: inline-flex;
+        flex-direction: row;
+        width: 49%;
+    }
+
+    .time-select .dropdown-label {
+        display: inline-block;
+        margin-top: 0px;
+        width: 40%;
+    }
+
+    .time-select .drop {
+        display: inline-block;
+        margin: 0px;
+        width: 100%;
+    }
+
+        .time-select .drop:disabled {
+            color: #000000;
+            border: solid;
+            border-width: 1px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+
+@media (max-width: 641px) {
+    .time-select {
+        padding: 5px;
+        font-size: .65em;
+    }
+
+        .time-select .time {
+            flex-direction: column;
+        }
+}
+/* #endregion TIMESELECT */
+
+/* #region CALENDARITEMSELECT */
+.select-calendar-item {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: var(--menu-med-blue);
+    margin: 0;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+    .select-calendar-item .header {
+        height: 8%;
+        width: 100%;
+        background: var(--menu-header-blue);
+        border-bottom: solid;
+        border-width: 3px;
+    }
+
+    .select-calendar-item .close-button {
+        float: right;
+    }
+
+    .select-calendar-item .body {
+    }
+
+    .select-calendar-item .existing-item {
+        border: solid;
+        border-radius: 5px;
+        border-width: 1px;
+        padding: 5px;
+    }
+
+    .select-calendar-item .item {
+        border: solid;
+        border-radius: 5px;
+        border-width: 1px;
+        padding: 5px;
+        font-weight: normal;
+        margin: 5px;
+        width: 98.5%;
+        background: var(--menu-light-blue);
+    }
+
+    .select-calendar-item .new-item {
+        padding: 10px;
+    }
+/* #endregion CALENDARITEMSELECT */
+
+/* #region EDITEVENT */
+.edit-event {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: var(--menu-med-blue);
+    margin: 0;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+    .edit-event .header {
+        height: 8%;
+        width: 100%;
+        background: var(--menu-header-blue);
+        border-bottom: solid;
+        border-width: 3px;
+    }
+
+    .edit-event .close-button {
+        float: right;
+    }
+
+    .edit-event .top {
+        height: 60px;
+    }
+
+    .edit-event .date {
+        padding: 5px;
+        font-size: 18px;
+        margin-bottom: -5px;
+        width: 10%;
+        display: inline-block;
+    }
+
+    .edit-event .add-new-item {
+        float: right;
+        padding: 5px;
+    }
+
+    .edit-event .event-info {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .edit-event .save {
+        float: right;
+        margin-right: 9px;
+        padding: 5px;
+    }
+
+    .edit-event .delete {
+        float: right;
+        margin-right: 9px;
+        padding: 5px;
+    }
+/* #endregion EDITEVENT */
+
+/* #region EDITPRACTICE */
+.edit-practice {
+    padding: 5px; /*inner*/
+    border-radius: 5px;
+    background: var(--menu-med-blue);
+    margin: 0;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    overflow: hidden;
+}
+
+    .edit-practice .header {
+        height: 8%;
+        width: 100%;
+        background: var(--menu-header-blue);
+        border-bottom: solid;
+        border-width: 1.5px;
+        text-align: left;
+    }
+
+    .edit-practice .close-button {
+        position: absolute;
+        right: 3px;
+    }
+
+    .edit-practice .body {
+        text-align: left;
+    }
+
+    .edit-practice .date {
+        padding: 5px;
+        font-size: 18px;
+        margin-bottom: -5px;
+        width: 10%;
+        display: inline-block;
+    }
+
+    .edit-practice .add-event {
+        float: right;
+        padding: 5px;
+    }
+
+    .edit-practice .top {
+        display: flex;
+        padding: 0px;
+        width: 100%;
+        margin-bottom: 5px;
+        height: 80px;
+    }
+
+    .edit-practice .med {
+        background: var(--menu-light-blue);
+        display: flex;
+        width: 49%;
+        padding: 5px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+
+    .edit-practice .track {
+        background: var(--menu-light-blue);
+        display: inline-block;
+        width: 49%;
+        padding: 5px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .edit-practice .notes {
+        width: 100%;
+        font-size: .75em;
+        margin-left: 10px;
+    }
+
+        .edit-practice .notes:disabled {
+            margin-left: 1000px;
+            font-size: 43px;
+        }
+
+    .edit-practice .save {
+        float: right;
+        margin-right: 9px;
+        padding: 5px;
+    }
+
+    .edit-practice .delete {
+        float: right;
+        margin-right: 9px;
+        padding: 5px;
+    }
+
+    .edit-practice .error {
+        font-weight: normal;
+        color: red;
+        display: inline-block;
+        position: absolute;
+        right: 80px;
+        font-size: 13px;
+        width: 250px;
+    }
+
+    .edit-practice .irregular-practice {
+        font-weight: normal;
+        display: inline-block;
+        font-size: 13px;
+        float: left;
+    }
+@media (max-width: 641px) {
+    .edit-practice .notes {
+        width: 15%;
+        margin-left: 1px;
+    }
+
+    .edit-practice .track {
+        padding: 10px;
+    }
+}
+/* #endregion EDITPRACTICE */
