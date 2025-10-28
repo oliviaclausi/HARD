@@ -126,6 +126,25 @@ code {
 }
 /* #endregion VARIABLES */
 
+/* #region BUTTONS */
+.butt-blue {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    background-color: var(--menu-med-blue);
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    transition-duration: 0.2s;
+    text-shadow: 2px 2px 5px #000000;
+}
+.butt-blue:hover {
+    background-color: #555555;
+}
+.butt-blue:active {    
+    transform: translateY(4px);
+}
+/* #endregion BUTTONS */
+
 /* #region CALENDAR */
 /* CALENDAR */
 .calendar-header {
@@ -187,7 +206,6 @@ code {
     width: 100%;
     height: 600px;
     min-width: 800px;
-/*    max-width: 1000px;*/
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -674,3 +692,57 @@ code {
     }
 }
 /* #endregion EDITPRACTICE */
+
+/* #region ADMIN */
+.admin {
+    background-color: var(--menu-med-blue);
+    padding: 5px;
+}
+    .admin .message {
+        background-color: var(--menu-light-blue);
+        box-shadow: var(--shadow);
+        height: 30px;
+    }
+    .admin .calendar {
+        background-color: var(--menu-light-blue);
+        box-shadow: var(--shadow);
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+        .admin .calendar .add-days {
+            box-shadow: var(--shadow);
+            padding: 5px;
+            text-align: center;
+            margin: 10px;
+        }
+            .admin .calendar .add-days label {
+                display: block;
+                text-align: left;
+                font-weight: bold;
+            }
+            .admin .calendar .add-days .buttle {
+                margin: 10px;
+            }
+        .admin .calendar .list {
+            box-shadow: var(--shadow);
+            height: 300px;
+            padding: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+            .admin .calendar .list label {
+                display: block;
+                text-align: left;
+                font-weight: bold;
+            }
+            .admin .calendar .list .input {
+                height: 200px;
+                width: 175px;
+                resize: none;
+            }
+            .admin .calendar .list .buttle {
+                margin: 10px;
+            }
+/* #endregion ADMIN */
