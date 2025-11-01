@@ -142,6 +142,7 @@ code {
     line-height: 1;
     list-style: none;
     overflow: hidden;
+    border-color: #000000;
 }
     .butt:active {
         transform: translateY(4px);
