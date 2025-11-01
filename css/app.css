@@ -167,11 +167,23 @@ code {
             text-transform: uppercase;
             letter-spacing: 3px;
         }
-/* Previous button inside month header */
-    .calendar-header .prev {
-        float: left;
-        padding-top: 10px;
+    .calendar-header .butt {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #FFFFFF;
+        text-shadow: 2px 2px 5px #000000;
+        font-size: 1.5em;
+        margin-top: -10px;
     }
+        .calendar-header .butt:active {
+            transform: translateY(4px);
+        }
+        /* Previous button inside month header */
+        .calendar-header .prev {
+            float: left;
+            padding-top: 10px;
+        }
 /* Next button */
     .calendar-header .next {
         float: right;
@@ -370,6 +382,8 @@ code {
     margin-left: 2px;
     font-size: 13px;
     width: 75%;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
 }
 
     .drop:disabled {
@@ -381,6 +395,10 @@ code {
         text-indent: 1px;
         text-overflow: '';
     }
+
+.drop-item {
+    
+}
 
 .dropdown-label {
     width: 80%;
@@ -578,7 +596,6 @@ code {
     display: block;
     font-size: 1em;
     font-weight: bold;
-    text-align: right;
     overflow: hidden;
 }
 
@@ -588,12 +605,11 @@ code {
         background: var(--menu-header-blue);
         border-bottom: solid;
         border-width: 1.5px;
-        text-align: left;
     }
 
     .edit-practice .close-button {
         position: absolute;
-        right: 3px;
+        right: 30px;
     }
 
     .edit-practice .body {
