@@ -1,4 +1,4 @@
-/* #region DEFAULT */
+﻿/* #region DEFAULT */
 html, body {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
 }
@@ -66,7 +66,7 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-.loading-progress {
+/*.loading-progress {
     position: relative;
     display: block;
     width: 8rem;
@@ -97,7 +97,66 @@ a, .btn-link {
 
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
+    }*/
+
+.loader {
+    transform: translateZ(1px);
+}
+
+    .loader:after {
+        content: '🍋';
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 48px;
+        font-weight: bold;
+        background: var(--hard-blue);
+        color: #ffffff;
+        border: 14px double;
+        box-sizing: border-box;
+/*        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);*/
+        animation: coin-flip 20s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
+
+@keyframes coin-flip {
+    0%, 100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+
+    100% {
+        transform: rotateX(3600deg);
+    }
+}
+
+.center-loader {
+    width: 128px;
+    height:128px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.page-center-loader {
+    top: 10%;
+    left: 36%;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 
 code {
     color: #c02d76;
@@ -936,3 +995,61 @@ code {
         margin: 10px;
     }
 /* #endregion HOME */
+
+/* #region UPDATEMEMBER */
+.update-member {
+    padding: 0px; /*inner*/
+    border-radius: var(--calendar-radius);
+    background: var(--menu-med-blue);
+    margin: 0;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+    border: solid;
+    border-width: 2px;
+    max-width: 400px;
+}
+    .update-member .header {
+        height: 30px;
+        padding: 3px;
+        width: 100%;
+        background: var(--menu-header-blue);
+        border-bottom: solid;
+        border-width: 2px;
+    }
+    .update-member .close-button {
+        float: right;
+    }
+    .update-member .body {
+        background: var(--menu-light-blue);
+        display: inline-block;
+        width: 98%;
+        padding: 5px;
+        border: solid;
+        border-width: 2px;
+        border-radius: var(--calendar-radius);
+        margin: 5px;
+    }
+    .update-member .input-text {
+        border: solid;
+        border-width: 2px;
+        border-radius: var(--calendar-radius);
+        width: 70%;
+        box-sizing: border-box;
+    }
+    .update-member .label {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .update-member .check-label {
+        width: 10%;
+        display: flex;
+    }
+    .update-member .buttle {
+        float: right;
+        margin-right: 0px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+/* #endregion UPDATEMEMBER */
