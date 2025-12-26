@@ -206,6 +206,22 @@ code {
     .butt:active {
         transform: translateY(4px);
     }
+.butt-small {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.2s;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    height: 28px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    border-color: #000000;
+}
 .butt-blue {
     background-color: #4d50dc;
     color: white;
@@ -520,6 +536,24 @@ code {
 .dropdown-label {
     width: 80%;
     display: block;
+}
+
+.dropdown-container-small {
+    display: block;
+    margin: 1px;
+    width: 100%;
+}
+.drop-small {
+    display: flex;
+    padding: 0px;
+    margin-left: 2px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid;
+    border-width: 2px;
+}
+.drop-item-small {
+
 }
 
 @media (max-width: 641px) {
@@ -1002,6 +1036,7 @@ code {
     border-radius: var(--calendar-radius);
     background: var(--menu-med-blue);
     margin: 0;
+    margin-bottom: 10px;
     display: block;
     font-size: 1em;
     font-weight: bold;
@@ -1051,5 +1086,15 @@ code {
         margin-right: 0px;
         padding: 5px;
         margin-top: 5px;
+    }
+    .update-member .buttle-left {
+        float: left;
+        margin-right: 0px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .update-member .help {
+        font-weight: normal;
+        font-size: .75em;
     }
 /* #endregion UPDATEMEMBER */

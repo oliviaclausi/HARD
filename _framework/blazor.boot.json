@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HARDUtility",
   "resources": {
-    "hash": "sha256-/jUDJJIeRLKGdenCntSourwfXERgxvXVaiSw4+3MNBY=",
+    "hash": "sha256-P2ebSyTH89HtBCdqTP7efG5c6fONdA8AA+PcpduBwsA=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -19,7 +19,7 @@
     "coreAssembly": {},
     "assembly": {
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-OVnHbDzHpGIixdNTZBHs4LV/ZZAtu4rhsqjQpc3H9Hs=",
-      "Microsoft.AspNetCore.Components.wasm": "sha256-S7fSE9mzjgA+l9eQdZmHStK4keBDX9dWCpccWyRCpGE=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-qQc+Pv3Fmzfr+0zVlH47QNYR1lXbrI3+T+SI4ddV3Po=",
       "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-s4s1Yw/u6jbHqvIT27Im44b0hRBnfQciyhnGKQBVxVo=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-puIepTGLGO5gLkIpNWVZCLePl5POT9lIgWm58dSV7xo=",
       "Microsoft.AspNetCore.Components.QuickGrid.wasm": "sha256-h5aPVUaiNWWaJIejfL/eulLxem5b9hUDoZmIkdGe3Uc=",
@@ -60,8 +60,8 @@
       "System.Drawing.Primitives.wasm": "sha256-Dfdz9T9Fy7lE/fPpSi5MfxF+iUW3YhLbqvgwC3rIjqs=",
       "System.Drawing.wasm": "sha256-SibQCA54mFn93JO9ROTAdfhpu+E1sV/auVUgbikKK6I=",
       "System.Linq.Expressions.wasm": "sha256-qGMy1s2iK/Fx3Rai4WO9UUl3z7xZMJqrFwprmCtSKYs=",
-      "System.Linq.Queryable.wasm": "sha256-sstL1JGE5VkfWXo3Ac4DakzRRY39Sod3pVUuV+MKhCE=",
-      "System.Linq.wasm": "sha256-GMbGqNPAzYS0qv3gM/Agk1kr3mkB4Ha3Yyw9Ym8LJq4=",
+      "System.Linq.Queryable.wasm": "sha256-CBzbPpE9RMsawK1TUIkMOEj7Ijfc2Owsjz99MIyzS10=",
+      "System.Linq.wasm": "sha256-NhURVq4PU06HPl3eIIdhp0ooi+QqVNmq/E9F7qOMNHY=",
       "System.Memory.wasm": "sha256-JyzhAq3bZc0n/+v+iuxLj90XgFLHKmAO2oxpd8lAVjI=",
       "System.Net.Http.wasm": "sha256-gLdS8QmiHWZlYhrVB79O7r4zMxe+NiVoMvCN3cnxumg=",
       "System.Net.Primitives.wasm": "sha256-0g5Ui9doEM5MDg8/SJtaqtQDGmv3cCmbt97CiydpGQo=",
@@ -92,7 +92,7 @@
       "System.wasm": "sha256-/Ib2sECJIp5OmAw2FVP/3jA36Bh6yA6fac798DlmOd8=",
       "netstandard.wasm": "sha256-Be+n7CQPqI22esurry6bNICqwMqPt5qISGIgmXgsc4w=",
       "System.Private.CoreLib.wasm": "sha256-26HxmgTjL7xLsl/z5f8Re0vKHJshXI0J/wL/pBoRjWk=",
-      "HARDUtility.wasm": "sha256-8S+B3V7w8atcWT4GaUu1qr4edRxfVgF4ahFOYgLXfyM="
+      "HARDUtility.wasm": "sha256-I7v41IQiwQLT5k0Fmkbwvp4orhcBL6U/cYEYuiFnL/o="
     }
   },
   "cacheBootResources": true,
