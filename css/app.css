@@ -3,6 +3,12 @@ html, body {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
 }
 
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: var(--menu-light-blue);
+}
+
 h1:focus {
     outline: none;
 }
@@ -1098,3 +1104,51 @@ code {
         font-size: .75em;
     }
 /* #endregion UPDATEMEMBER */
+/* #region ATTENDANCE */
+.attendance-sign-in-container {
+    border-radius: var(--calendar-radius);
+    border: solid;
+    border-width: 2px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+    .attendance-sign-in-container button {
+        margin: 10px;
+        font-weight: normal;
+        font-size: .75em;
+    }
+.attendance-missed-sign-in-container {
+    border-radius: var(--calendar-radius);
+    border: solid;
+    border-width: 2px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    display: grid;
+}
+.attendance-missed-sign-in-container button {
+    float: right;
+}
+
+.attendance-grid-container {
+    border-radius: var(--calendar-radius);
+    border: solid;
+    border-width: 2px;
+    padding: 10px;
+    margin: 10px;
+}
+    /* #endregion ATTENDANCE */
+/* #region HELP */
+.help-container {
+    border-radius: var(--calendar-radius);
+    border: solid;
+    border-width: 2px;
+    margin: 10px;
+    padding: 10px;
+}
+/* #endregion HELP */
