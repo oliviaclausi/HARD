@@ -184,6 +184,7 @@ code {
     --league: #3554d0;
     --rookies: #fa5252;
     --scrimmage: #42d8ed;
+    --nonrar: #f5813f;
     --event: #a99e9e;
     --trainer: #e0d054;
     --med: #fe0808;
@@ -418,6 +419,9 @@ code {
         }
         .calendar-day .item .practice .Scrimmage {
             background: var(--scrimmage);
+        }
+        .calendar-day .item .practice .NonRaR {
+            background: var(--nonrar);
         }
     .calendar-day .item .event {
         background: var(--event);
