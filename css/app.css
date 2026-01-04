@@ -455,7 +455,17 @@ code {
             height: 100%;
             border-radius: 13px;
         }
-
+.calendar-key {
+    margin-top: 10px;
+}
+    .calendar-key .calendar-day {
+        height: 210px;
+        width: 50%;
+    }
+    .calendar-key .calendar-day .item {
+        width: 80%;
+        float: left;
+    }
 @media (max-width: 641px) {
     .calendar-header {
         padding: 40px 25px;
@@ -504,6 +514,9 @@ code {
             border-radius: 2px;
             font-size: .85em;
         }
+    .calendar-key .calendar-day {
+        width: 100%;
+    }
 }
 /* #endregion CALENDAR */
 
