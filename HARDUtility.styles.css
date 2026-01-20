@@ -227,7 +227,7 @@ main[b-24h9dwy28o] {
     display: block;
     font-size: 1em;
     font-weight: bold;
-    overflow: hidden;
+    /*overflow: hidden;*/
     border: solid;
     border-width: 2px;
 }
@@ -272,9 +272,10 @@ main[b-24h9dwy28o] {
     display: block;
     font-size: .85em;
     font-weight: bold;
-    overflow: hidden;
+    /*overflow: hidden;*/
     border: solid;
     border-width: 2px;
+    width: fit-content;
 }
 
 .members-grid-col1[b-z9f67039gv] {
