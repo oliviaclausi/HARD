@@ -359,6 +359,10 @@ code {
     justify-content: center;
 }
 
+.calendar-day-highlight {
+    background: #ca61c1 !important;
+}
+
 .calendar-day {
     padding: 7px; /*inner*/
     border-radius: var(--calendar-radius);
@@ -376,6 +380,7 @@ code {
     vertical-align: top;
     overflow-y: hidden;
 }
+
     .calendar-day .time {
         border: none;
         background: none;
@@ -466,6 +471,20 @@ code {
         width: 80%;
         float: left;
     }
+.trainer-filters {
+    width: 85%;
+    margin-bottom: 10px;
+}
+.trainer-view-switch {
+    margin-left: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    font-size: .85em;
+}
+.trainers-drop {
+    display: inline-block;
+    width: 50%;
+}
 @media (max-width: 641px) {
     .calendar-header {
         padding: 40px 25px;
