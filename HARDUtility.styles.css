@@ -226,10 +226,14 @@ main[b-24h9dwy28o] {
     margin: 10px;
     display: block;
     font-size: 1em;
-    font-weight: bold;
+    /*font-weight: bold;*/
     /*overflow: hidden;*/
     border: solid;
     border-width: 2px;
+}
+
+.attendance-grid .header[b-0fjsy83nqe] {
+    font-weight: bold;
 }
 
 [b-0fjsy83nqe] .quickgrid {
@@ -238,7 +242,7 @@ main[b-24h9dwy28o] {
     /*    background: var(--menu-light-blue);*/
     border: solid;
     border-width: 2px;
-    font-weight: normal;
+    /*font-weight: bold;*/
     width: 100%;
     height: 6.5rem;
     overflow-y: auto;
@@ -247,7 +251,8 @@ main[b-24h9dwy28o] {
 [b-0fjsy83nqe] thead {
     position: sticky;
     top: 0;
-    background-color: var(--menu-header-blue)
+    background-color: var(--menu-header-blue);
+    font-weight: bold;
 }
 
 [b-0fjsy83nqe] tbody tr {
@@ -255,10 +260,14 @@ main[b-24h9dwy28o] {
 }
 
 [b-0fjsy83nqe] tr:nth-child(even) {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
 }
 
-[b-0fjsy83nqe] .dropdown-container {
+[b-0fjsy83nqe] td:nth-child(2n+3) {
+    background: rgb(37, 100, 10, 0.3);
+}
+
+[b-0fjsy83nqe] .attendance-dropdown-container {
     padding: 0px;
 }
 /* /Pages/Members.razor.rz.scp.css */
