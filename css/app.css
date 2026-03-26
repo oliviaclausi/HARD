@@ -177,6 +177,7 @@ code {
     --menu-header-blue: #5761a0;
     --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     --calendar-radius: 8px;
+    --butt-height: 40px;
 }
 .calendar-day {
     --wailers: #189229;
@@ -203,7 +204,7 @@ code {
     padding-right: 16px;
     transition-duration: 0.2s;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-    height: 40px;
+    height: var(--butt-height);
     justify-content: center;
     line-height: 1;
     list-style: none;
@@ -274,375 +275,367 @@ code {
     /*background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM15 9l-6 6m0-6l6 6"/></svg>');*/
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.47 8.47a.75.75 0 0 1 1.06 0L12 10.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L13.06 12l2.47 2.47a.75.75 0 0 1-1.06 1.06L12 13.06l-2.47 2.47a.75.75 0 1 1-1.06-1.06L10.94 12L8.47 9.53a.75.75 0 0 1 0-1.06"></path><path fill="currentColor" fill-rule="evenodd" d="M7.317 3.769a42.502 42.502 0 0 1 9.366 0c1.827.204 3.302 1.643 3.516 3.48c.37 3.157.37 6.346 0 9.503c-.215 1.837-1.69 3.275-3.516 3.48a42.5 42.5 0 0 1-9.366 0c-1.827-.205-3.302-1.643-3.516-3.48a40.903 40.903 0 0 1 0-9.503c.214-1.837 1.69-3.276 3.516-3.48m9.2 1.49a41.001 41.001 0 0 0-9.034 0A2.486 2.486 0 0 0 5.29 7.424a39.402 39.402 0 0 0 0 9.154a2.486 2.486 0 0 0 2.193 2.164c2.977.332 6.057.332 9.034 0a2.486 2.486 0 0 0 2.192-2.164a39.401 39.401 0 0 0 0-9.154a2.486 2.486 0 0 0-2.192-2.163" clip-rule="evenodd"/></svg>');
 }
-/* #endregion BUTTONS */
+@media (max-width: 641px) {
+    .butt {        
+        padding-left: 10px;
+        padding-right: 10px;   
+        border-width: 1.5px;
+        height: 25px;
+        font-size: 0.75em;
+    }
+    .butt-small {
+        padding-left: 4px;
+        padding-right: 4px;
+        height: 20px;
+        font-size: 0.75em;
+        border-width: 1.5px;
+    }
+}
 
-/* #region CALENDAR */
-/* CALENDAR */
-.calendar-container {
-    max-width: 1200px;
-    padding: 15px;
-}
-.calendar-header {
-    padding: 60px 25px;
-    width: 100%;
-    background: var(--hard-blue);
-    text-align: center;
-    height: 150px;
-    font-size: .75em;
-    text-shadow: 2px 2px 4px #000000;
-    border-top-left-radius: var(--calendar-radius);
-    border-top-right-radius: var(--calendar-radius);
-}
-    .calendar-header ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+    /* #endregion BUTTONS */
+
+    /* #region BORDERS ETC */
+    .bord-0 {
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 0.5px;
     }
-        .calendar-header ul li {
-            color: white;
-            font-size: 1.75em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+
+    .bord-1 {
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 1px;
+    }
+
+    .bord-2 {
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 2px;
+    }
+    /* #endregion BORDERS ETC */
+
+    /* #region CALENDAR */
+    /* CALENDAR */
+    .calendar-container {
+        max-width: 1200px;
+        padding: 15px;
+    }
+
+    .calendar-header {
+        padding: 60px 25px;
+        width: 100%;
+        background: var(--hard-blue);
+        text-align: center;
+        height: 150px;
+        font-size: .75em;
+        text-shadow: 2px 2px 4px #000000;
+        border-top-left-radius: var(--calendar-radius);
+        border-top-right-radius: var(--calendar-radius);
+    }
+
+        .calendar-header ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
         }
-    .calendar-header .butt {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        color: #FFFFFF;
-        text-shadow: 2px 2px 5px #000000;
-        font-size: 1.5em;
-        margin-top: -10px;
-    }
+
+            .calendar-header ul li {
+                color: white;
+                font-size: 1.75em;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+        .calendar-header .butt {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 5px #000000;
+            font-size: 1.5em;
+            margin-top: -10px;
+        }
         /* Previous button inside month header */
         .calendar-header .prev {
             float: left;
             padding-top: 10px;
         }
-/* Next button */
-    .calendar-header .next {
-        float: right;
-        padding-top: 10px;
+        /* Next button */
+        .calendar-header .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+    /* Weekdays (Mon-Sun) */
+    .calendar-header-weekdays {
+        margin: 0;
+        padding-left: 10px;
+        background-color: var(--menu-header-blue);
     }
 
-/* Weekdays (Mon-Sun) */
-.calendar-header-weekdays {
-    margin: 0;
-    padding-left: 10px;
-    background-color: var(--menu-header-blue);
-}
-    .calendar-header-weekdays li {
+        .calendar-header-weekdays li {
+            display: inline-block;
+            width: 13.6%;
+            color: #fff;
+            text-align: center;
+        }
+
+    .calendar-week-start-toggle {
+        text-align: left;
+        position: relative;
+        bottom: 1px;
+        color: white;
+    }
+
+    .calendar-body {
+        padding: 5px;
+        padding-left: 10px;
+        border-bottom-left-radius: var(--calendar-radius);
+        border-bottom-right-radius: var(--calendar-radius);
+        padding-bottom: 22px;
+        background: var(--hard-blue);
+        width: 100%;
+        height: 600px;
+        min-width: 800px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .calendar-day-highlight {
+        background: #F25CE1 !important;
+    }
+
+    .calendar-day {
+        padding: 5px; /*inner*/
+        border-radius: var(--calendar-radius);
+        background: var(--day-color);
+        box-shadow: var(--shadow);
+        margin: 0;
+        margin-bottom: 10px;
+        margin-right: 5px;
         display: inline-block;
         width: 13.6%;
-        color: #fff;
-        text-align: center;
-    }
-
-.calendar-week-start-toggle {
-    text-align: left;
-    position: relative;
-    bottom: 1px;
-    color: white;
-}
-
-.calendar-body {
-    padding: 5px;
-    padding-left: 10px;
-    border-bottom-left-radius: var(--calendar-radius);
-    border-bottom-right-radius: var(--calendar-radius);
-    padding-bottom: 22px;
-    background: var(--hard-blue);
-    width: 100%;
-    height: 600px;
-    min-width: 800px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.calendar-day-highlight {
-    background: #F25CE1 !important;
-}
-
-.calendar-day {
-    padding: 7px; /*inner*/
-    border-radius: var(--calendar-radius);
-    background: var(--day-color);
-    box-shadow: var(--shadow);
-    margin: 0;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    display: inline-block;
-    width: 13.6%;
-    height: 19%;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: right;
-    vertical-align: top;
-    overflow-y: hidden;
-}
-
-    .calendar-day .time {
-        border: none;
-        background: none;
-        font-size: .75em;
-        font-weight: normal;
-        width: 100%;
-        display: inline-block;
-        padding: 0px;
-        margin: -5px;
-        margin-top: -15px;
-    }
-    .calendar-day .item {
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-        font-weight: normal;
-        overflow: clip;
-        text-overflow: ellipsis;
-        display: inline-block;
-        max-height: 24px;
-        width: 100%;        
-    }
-    .calendar-day .item .item-text {
-        padding-right: 10px;
-    }
-    .calendar-day .item .practice {
-
-    }
-        .calendar-day .item .practice .Wailers {
-            background: var(--wailers);
-            color: white;
-        }
-        .calendar-day .item .practice .Banshees {
-            background: var(--banshees);
-        }
-        .calendar-day .item .practice .League {
-            background: var(--league);
-            color: white;
-        }
-        .calendar-day .item .practice .Rookies {
-            background: var(--rookies);
-        }
-        .calendar-day .item .practice .Scrimmage {
-            background: var(--scrimmage);
-        }
-        .calendar-day .item .practice .NonRaR {
-            background: var(--nonrar);
-        }
-    .calendar-day .item .event {
-        background: var(--event);
-    }
-
-    .calendar-day .notification {
-        display: inline-block;
-        box-shadow: var(--shadow);
-        object-fit: contain;
-        float: left;
-        text-align: center;
-        width: 20%;
-        border-radius: 14px;
-        height: 20px;
-        margin-top: 2px;
+        height: 19%;
+        font-size: 1em;
         font-weight: bold;
-        word-wrap: anywhere;
+        text-align: right;
+        vertical-align: top;
+        overflow-y: hidden;
     }
-        .calendar-day .notification .trainer {
-            background: var(--trainer);
-            height: 100%;
-            border-radius: 13px;
+
+        .calendar-day .time {
+            border: none;
+            background: none;
+            font-size: .75em;
+            font-weight: normal;
+            width: 100%;
+            display: inline-block;
+            padding: 0px;
+            margin: -5px;
+            margin-top: -15px;
+            text-align: left;
         }
-        .calendar-day .notification .med {
-            background: var(--med);
-            height: 100%;
-            border-radius: 13px;
+
+        .calendar-day .item {
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+            font-weight: normal;
+            overflow: clip;
+            text-overflow: ellipsis;
+            /*        display: inline-block;*/
+            max-height: 24px;
+            width: 100%;
         }
-        .calendar-day .notification .irregular {
-            background: var(--irregular);
-            height: 100%;
-            border-radius: 13px;
+
+            .calendar-day .item .item-text {
+                padding-right: 10px;
+            }
+
+            .calendar-day .item .practice {
+            }
+
+                .calendar-day .item .practice .Wailers {
+                    background: var(--wailers);
+                    color: white;
+                }
+
+                .calendar-day .item .practice .Banshees {
+                    background: var(--banshees);
+                }
+
+                .calendar-day .item .practice .League {
+                    background: var(--league);
+                    color: white;
+                }
+
+                .calendar-day .item .practice .Rookies {
+                    background: var(--rookies);
+                }
+
+                .calendar-day .item .practice .Scrimmage {
+                    background: var(--scrimmage);
+                }
+
+                .calendar-day .item .practice .NonRaR {
+                    background: var(--nonrar);
+                }
+
+            .calendar-day .item .event {
+                background: var(--event);
+            }
+
+            .calendar-day .item .bout {
+                background: repeating-linear-gradient( 45deg, var(--banshees), var(--banshees) 10px, var(--scrimmage) 10px, var(--scrimmage) 20px );
+            }
+
+        .calendar-day .notification {
+            display: inline-block;
+            box-shadow: var(--shadow);
+            object-fit: contain;
+            float: left;
+            text-align: center;
+            width: 20%;
+            border-radius: 14px;
+            height: 20px;
+            margin-top: 2px;
+            font-weight: bold;
+            word-wrap: anywhere;
         }
-.calendar-key {
-    margin-top: 10px;
-}
-    .calendar-key .calendar-day {
-        height: 210px;
+
+            .calendar-day .notification .trainer {
+                background: var(--trainer);
+                height: 100%;
+                border-radius: 13px;
+            }
+
+            .calendar-day .notification .med {
+                background: var(--med);
+                height: 100%;
+                border-radius: 13px;
+            }
+
+            .calendar-day .notification .irregular {
+                background: var(--irregular);
+                height: 100%;
+                border-radius: 13px;
+            }
+
+    .calendar-key {
+        margin-top: 10px;
+    }
+
+        .calendar-key .calendar-day {
+            height: 210px;
+            width: 50%;
+        }
+
+            .calendar-key .calendar-day .item {
+                width: 80%;
+                float: left;
+            }
+
+    .trainer-filters {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+
+    .trainer-view-switch {
+        margin-left: 10px;
+        margin-right: 5px;
+        display: inline-block;
+        font-size: .85em;
+    }
+
+    .trainers-drop {
+        display: inline-block;
         width: 50%;
     }
-    .calendar-key .calendar-day .item {
-        width: 80%;
-        float: left;
-    }
-.trainer-filters {
-    width: 85%;
-    margin-bottom: 10px;
-}
-.trainer-view-switch {
-    margin-left: 10px;
-    margin-right: 5px;
-    display: inline-block;
-    font-size: .85em;
-}
-.trainers-drop {
-    display: inline-block;
-    width: 50%;
-}
-@media (max-width: 641px) {
-    .calendar-header {
-        padding: 40px 25px;
-        min-width: 325px;
-    }
-    .calendar-header-weekdays {
-        min-width: 325px;
-        font-size: .75em;
-    }
-        .calendar-header-weekdays li {
-            width: 12.8%;
+
+    @media (max-width: 641px) {
+        .calendar-header {
+            padding: 40px 25px;
+            min-width: 325px;
         }
-    .calendar-body {
-        padding-left: 3px;
-        padding-right: 0px;
-        padding-top: 4px;
-        padding-bottom: 3px;
-        height: 450px;
-        min-width: 325px;
-    }
-    .calendar-day {
-        padding: 1px; /*inner*/
-        border-radius: 2px;
-        margin-bottom: 5px;
-        margin-right: 4px;
-        min-width: 41px;
-        width: 12.9%;
-        height: 19%;
-        font-weight: bold;
-        font-size: .75em;
-        vertical-align: top;
-        overflow: clip;
-    }
-        .calendar-day .notification {
-            width: 30%;
-            height: 15%;
+
+        .calendar-header-weekdays {
+            min-width: 325px;
             font-size: .75em;
         }
-        .calendar-day .time {
+
+            .calendar-header-weekdays li {
+                width: 12.8%;
+            }
+
+        .calendar-body {
+            padding-left: 3px;
             padding-right: 0px;
-            font-size: .75em;
-            overflow: hidden;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            height: 450px;
+            min-width: 325px;
         }
-        .calendar-day .item {
-            max-height: 17px;
+
+        .calendar-day {
+            padding: 1px; /*inner*/
             border-radius: 2px;
-            font-size: .85em;
+            margin-bottom: 5px;
+            margin-right: 4px;
+            min-width: 41px;
+            width: 12.9%;
+            height: 19%;
+            font-weight: bold;
+            font-size: .75em;
+            vertical-align: top;
+            overflow: clip;
         }
-    .calendar-key .calendar-day {
-        width: 100%;
+
+            .calendar-day .notification {
+                width: 30%;
+                height: 15%;
+                font-size: .75em;
+            }
+
+            .calendar-day .time {
+                padding-right: 0px;
+                font-size: .75em;
+                overflow: hidden;
+            }
+
+            .calendar-day .item {
+                max-height: 17px;
+                border-radius: 2px;
+                font-size: .85em;
+            }
+
+        .calendar-key .calendar-day {
+            width: 100%;
+        }
     }
-}
-/* #endregion CALENDAR */
+    /* #endregion CALENDAR */
 
-/* #region DROPDOWN */
-.dropdown-container {
-    display: block;
-    padding: 10px;
-    margin: 1px;
-    width: 100%;
-    font-size: 13px;
-}
-
-.drop {
-    display: flex;
-    padding: 10px;
-    margin-left: 2px;
-    font-size: 13px;
-    width: 75%;
-/*    box-shadow: var(--shadow);*/
-    border-radius: 5px;
-    border: solid;
-    border-width: 2px;
-}
-
-    .drop:disabled {
-        color: #000000;
-        background-color: #ffffff;
-        border: solid;
-        border-width: 2px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
-    }
-
-.drop-item {
-    
-}
-
-.dropdown-label {
-    width: 80%;
-    display: block;
-}
-
-.dropdown-container-small {
-    display: block;
-    margin: 1px;
-    width: 100%;
-}
-.drop-small {
-    display: flex;
-    padding: 0px;
-    margin-left: 2px;
-    width: 100%;
-    border-radius: 5px;
-    border: solid;
-    border-width: 2px;
-}
-.drop-item-small {
-
-}
-
-@media (max-width: 641px) {
+    /* #region DROPDOWN */
     .dropdown-container {
-        padding: 0px;
-        font-size: 11px;
+        display: block;
+        padding: 10px;
+        margin: 1px;
+        width: 100%;
+        font-size: 13px;
     }
 
     .drop {
-        padding: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-        width: 95%;
-    }
-}
-/* #endregion DROPDOWN */
-
-/* #region TIMESELECT */
-.time-select {
-    display: inline-flex;
-    flex-direction: row;
-    overflow: hidden;
-    font-size: .8em;
-    padding: 10px;
-    width: 100%;
-}
-
-    .time-select .time {
-        display: inline-flex;
-        flex-direction: row;
-        width: 100%;
+        display: flex;
+        padding: 10px;
+        margin-left: 2px;
+        font-size: 13px;
+        width: 75%;
+        /*    box-shadow: var(--shadow);*/
+        border-radius: 5px;
+        border: solid;
+        border-width: 2px;
     }
 
-    .time-select .dropdown-label {
-        display: inline-block;
-        margin-top: 3px;
-        width: 30%;
-    }
-
-    .time-select .drop {
-        display: inline-block;
-        margin: 0px;
-        width: 100%;
-    }
-
-        .time-select .drop:disabled {
+        .drop:disabled {
             color: #000000;
             background-color: #ffffff;
             border: solid;
@@ -653,586 +646,784 @@ code {
             text-overflow: '';
         }
 
-@media (max-width: 641px) {
+    .drop-item {
+    }
+
+    .dropdown-label {
+        width: 80%;
+        display: block;
+    }
+
+    .dropdown-container-small {
+        display: block;
+        margin: 1px;
+        width: 100%;
+    }
+
+    .drop-small {
+        display: flex;
+        padding: 0px;
+        margin-left: 2px;
+        width: 100%;
+        border-radius: 5px;
+        border: solid;
+        border-width: 2px;
+    }
+
+    .drop-item-small {
+    }
+
+    @media (max-width: 641px) {
+        .dropdown-container {
+            padding: 0px;
+            font-size: 11px;
+        }
+
+        .drop {
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 11px;
+            width: 95%;
+        }
+    }
+    /* #endregion DROPDOWN */
+
+    /* #region TIMESELECT */
     .time-select {
-        padding: 2px;
-        font-size: .65em;
+        display: inline-flex;
+        flex-direction: row;
+        overflow: hidden;
+        font-size: .8em;
+        padding: 10px;
+        width: 100%;
     }
 
         .time-select .time {
-            flex-direction: column;
+            display: inline-flex;
+            flex-direction: row;
+            width: 100%;
         }
+
         .time-select .dropdown-label {
-            width: 100%;
+            display: inline-block;
+            margin-top: 3px;
+            width: 30%;
         }
+
         .time-select .drop {
-            width: 95%;
-        }
-}
-/* #endregion TIMESELECT */
-
-/* #region SELECTCALENDARITEM */
-.select-calendar-item {
-    padding: 0px; /*inner*/
-    border-radius: var(--calendar-radius);
-    background: var(--menu-med-blue);
-    margin: 0;
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    overflow: hidden;
-    border: solid;
-    border-width: 2px;
-    min-width: 325px;
-}
-
-    .select-calendar-item .header {
-        height: 30px;
-        padding: 3px;
-        width: 100%;
-        background: var(--menu-header-blue);
-        border-bottom: solid;
-        border-width: 2px;
-    }
-
-    .select-calendar-item .close-button {
-        float: right;
-    }
-
-    .select-calendar-item .body {
-    }
-
-    .select-calendar-item .existing-item {
-        border: solid;
-        border-radius: var(--calendar-radius);
-        background-color: var(--menu-light-blue);
-        border-width: 2px;
-        padding: 2px;
-        margin: 5px;
-        width: 98.5%;
-    }
-
-    .select-calendar-item .item {
-        border: solid;
-        border-radius: var(--calendar-radius);
-        border-width: 2px;
-        padding: 5px;
-        font-weight: normal;
-        margin: 5px;
-        background: #ffffff;
-        width: 98.5%;
-    }
-
-    .select-calendar-item .new-item {
-        padding: 10px;
-    }
-@media (max-width: 641px) {
-    .select-calendar-item .existing-item {
-        width: 97.5%;
-    }
-
-    .select-calendar-item .item {
-        margin-top: 5px;
-        width: 97.5%;
-        padding: 2px;
-    }
-    .select-calendar-item .new-item {
-        padding: 5px;
-        width: 100%;
-    }
-}
-/* #endregion SELECTCALENDARITEM */
-
-/* #region EDITEVENT */
-.edit-event {
-    padding: 0px; /*inner*/
-    border-radius: var(--calendar-radius);
-    background: var(--menu-med-blue);
-    margin: 0;
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    overflow: hidden;
-    border: solid;
-    border-width: 2px;
-}
-
-    .edit-event .header {
-        height: 30px;
-        padding: 3px;
-        width: 100%;
-        background: var(--menu-header-blue);
-        border-bottom: solid;
-        border-width: 2px;
-    }
-
-    .edit-event .close-button {
-        float: right;
-    }
-
-    .edit-event .top {
-        height: 60px;
-        background: var(--menu-light-blue);
-        width: 66%;
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .edit-event .date {
-        padding: 5px;
-        font-size: 1em;
-        display: inline-block;
-    }
-
-    .edit-event .add-new-item {
-        float: right;
-        padding: 5px;
-    }
-
-    .edit-event .event-info {
-        padding: 10px;
-        margin-top: 10px;
-        background: var(--menu-light-blue);
-        width: 66%;
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .edit-event .input-box {
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        height: 40px;
-    }
-
-    .edit-event .input-box-area {
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        resize: none;
-        height: 100px;
-    }
-
-    .edit-event .save {
-        float: right;
-        margin-right: 9px;
-        padding: 5px;
-    }
-
-    .edit-event .delete {
-        float: right;
-        margin-right: 9px;
-        padding: 5px;
-    }
-
-@media (max-width: 641px) {
-    .edit-event .top {
-        width: 98%;
-        margin-top: 15px;
-        height: 74px;
-    }
-    .edit-event .event-info {
-        margin-top: 5px;
-        width: 96%;
-        padding: 2px;
-    }
-}
-/* #endregion EDITEVENT */
-
-/* #region EDITPRACTICE */
-.edit-practice {
-    padding: 0px; /*inner*/
-    border-radius: var(--calendar-radius);
-    background: var(--menu-med-blue);
-    margin: 0;
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    overflow: hidden;
-    border: solid;
-    border-width: 2px;
-}
-
-    .edit-practice .header {
-        height: 30px;
-        padding: 3px;
-        width: 100%;
-        background: var(--menu-header-blue);
-        border-bottom: solid;
-        border-width: 2px;
-    }
-
-    .edit-practice .close-button {
-        float: right;
-    }
-
-    .edit-practice .body {
-        text-align: left;
-        padding-left: 10px;
-        padding-right: 10px
-    }
-
-    .edit-practice .date {
-        padding: 5px;
-        font-size: 1em;
-        display: inline-block;
-    }
-
-    .edit-practice .add-event {
-        float: right;
-        padding: 5px;
-    }
-
-    .edit-practice .top {
-        display: inline-flex;
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .edit-practice .med {
-        background: var(--menu-light-blue);
-        display: inline-block;
-        width: 50%;
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .edit-practice .track-container {
-        display: inline-flex;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .edit-practice .track {
-        background: var(--menu-light-blue);
-        display: inline-block;
-        width: 50%;
-        padding: 5px;
-        border: solid;
-        border-width: 2px;
-        border-radius: var(--calendar-radius);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .edit-practice .notes {
-        width: 100%;
-        font-size: .75em;
-        margin-left: 10px;
-    }
-
-        .edit-practice .notes:disabled {
-            margin-left: 1000px;
-            font-size: 43px;
-        }
-
-    .edit-practice .save {
-        float: right;
-        margin-right: 9px;
-        padding: 5px;
-        margin-top: -5px;
-    }
-
-    .edit-practice .delete {
-        float: right;
-        margin-right: 9px;
-        padding: 5px;
-        margin-top: -5px;
-    }
-
-    .edit-practice .error {
-        font-weight: normal;
-        color: red;
-        display: inline-block;
-        position: absolute;
-        right: 80px;
-        font-size: 13px;
-        width: 250px;
-    }
-
-    .edit-practice .irregular-practice {
-        display: inline-block;
-        font-size: .8em;
-        float: left;
-    }
-@media (max-width: 641px) {
-    .edit-practice .notes {
-        width: 15%;
-        margin-left: 4px;
-    }
-    .edit-practice .body {
-        padding: 2px;
-    }
-    .edit-practice .med {
-        padding: 5px;
-        margin-left: 2px;
-        margin-right: 2px;
-    }
-    .edit-practice .track {
-        padding: 5px;
-        margin-left: 2px;
-        margin-right: 2px;
-    }
-}
-/* #endregion EDITPRACTICE */
-
-/* #region ADMIN */
-.admin {
-    background-color: var(--menu-med-blue);
-    padding: 5px;
-}
-    .admin .message {
-        background-color: var(--menu-light-blue);
-        box-shadow: var(--shadow);
-        margin: 10px;
-        height: 30px;
-    }
-    .admin .calendar {
-        background-color: var(--menu-light-blue);
-        box-shadow: var(--shadow);
-        width: 98%;
-        margin: 10px;
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-        .admin .calendar .add-days {
-            box-shadow: var(--shadow);
-            padding: 5px;
-            text-align: center;
-            margin: 10px;
-        }
-            .admin .calendar .add-days label {
-                display: block;
-                text-align: left;
-                font-weight: bold;
-            }
-            .admin .calendar .add-days .buttle {
-                margin: 10px;
-            }
-        .admin .calendar .list {
-            box-shadow: var(--shadow);
-            height: 300px;
-            padding: 5px;
-            margin: 10px;
-            text-align: center;
-        }
-            .admin .calendar .list label {
-                display: block;
-                text-align: left;
-                font-weight: bold;
-            }
-            .admin .calendar .list .input {
-                height: 200px;
-                width: 175px;
-                resize: none;
-            }
-            .admin .calendar .list .buttle {
-                margin: 10px;
-            }
-    .admin .log {
-        margin: 10px;
-        padding: 5px;
-        background-color: var(--menu-light-blue);
-        box-shadow: var(--shadow);
-        height: 350px;
-    }
-        .admin .log textarea {
-            box-shadow: var(--shadow);
-            resize: none;
-            height: 85%;
+            display: inline-block;
+            margin: 0px;
             width: 100%;
-            font-size: .75em;
         }
-        .admin .log .buttle {
+
+            .time-select .drop:disabled {
+                color: #000000;
+                background-color: #ffffff;
+                border: solid;
+                border-width: 2px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+                text-overflow: '';
+            }
+
+    @media (max-width: 641px) {
+        .time-select {
+            padding: 2px;
+            font-size: .65em;
+        }
+
+            .time-select .time {
+                flex-direction: column;
+            }
+
+            .time-select .dropdown-label {
+                width: 100%;
+            }
+
+            .time-select .drop {
+                width: 95%;
+            }
+    }
+    /* #endregion TIMESELECT */
+
+    /* #region SELECTCALENDARITEM */
+    .select-calendar-item {
+        padding: 0px; /*inner*/
+        border-radius: var(--calendar-radius);
+        background: var(--menu-med-blue);
+        margin: 0;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        overflow: hidden;
+        border: solid;
+        border-width: 2px;
+        min-width: 325px;
+    }
+
+        .select-calendar-item .header {
+            height: 30px;
+            padding: 3px;
+            width: 100%;
+            background: var(--menu-header-blue);
+            border-bottom: solid;
+            border-width: 2px;
+        }
+
+        .select-calendar-item .close-button {
+            float: right;
+        }
+
+        .select-calendar-item .body {
+        }
+
+        .select-calendar-item .existing-item {
+            border: solid;
+            border-radius: var(--calendar-radius);
+            background-color: var(--menu-light-blue);
+            border-width: 2px;
+            padding: 2px;
+            margin: 5px;
+            width: 98.5%;
+        }
+
+        .select-calendar-item .item {
+            border: solid;
+            border-radius: var(--calendar-radius);
+            border-width: 2px;
+            padding: 5px;
+            font-weight: normal;
+            margin: 5px;
+            background: #ffffff;
+            width: 98.5%;
+        }
+
+        .select-calendar-item .new-item {
+            padding: 10px;
+        }
+
+    @media (max-width: 641px) {
+        .select-calendar-item .existing-item {
+            width: 97.5%;
+        }
+
+        .select-calendar-item .item {
+            margin-top: 5px;
+            width: 97.5%;
+            padding: 2px;
+        }
+
+        .select-calendar-item .new-item {
+            padding: 5px;
+            width: 100%;
+        }
+    }
+    /* #endregion SELECTCALENDARITEM */
+
+    /* #region EDITEVENT */
+    .edit-event {
+        padding: 0px; /*inner*/
+        border-radius: var(--calendar-radius);
+        background: var(--menu-med-blue);
+        margin: 0;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        overflow: hidden;
+        border: solid;
+        border-width: 2px;
+    }
+
+        .edit-event .header {
+            height: 30px;
+            padding: 3px;
+            width: 100%;
+            background: var(--menu-header-blue);
+            border-bottom: solid;
+            border-width: 2px;
+        }
+
+        .edit-event .close-button {
+            float: right;
+        }
+
+        .edit-event .top {
+            height: 150px;
+            background: var(--menu-light-blue);
+            width: 66%;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .edit-event .date {
+            padding: 5px;
+            font-size: 1em;
+            display: inline-block;
+        }
+
+        .edit-event .add-new-item {
+            float: right;
+            padding: 5px;
+        }
+
+        .edit-event .event-info {
+            padding: 10px;
+            margin-top: 10px;
+            background: var(--menu-light-blue);
+            width: 66%;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .edit-event .input-box {
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            height: 40px;
+        }
+
+        .edit-event .input-box-area {
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            resize: none;
+            height: 100px;
+        }
+
+        .edit-event .save {
+            float: right;
+            margin-right: 9px;
+            padding: 5px;
+        }
+
+        .edit-event .delete {
+            float: right;
+            margin-right: 9px;
+            padding: 5px;
+        }
+
+    @media (max-width: 641px) {
+        .edit-event .top {
+            width: 98%;
+            margin-top: 15px;
+            height: 74px;
+        }
+
+        .edit-event .event-info {
+            margin-top: 5px;
+            width: 96%;
+            padding: 2px;
+        }
+    }
+    /* #endregion EDITEVENT */
+
+    /* #region EDITPRACTICE */
+    .edit-practice {
+        padding: 0px; /*inner*/
+        border-radius: var(--calendar-radius);
+        background: var(--menu-med-blue);
+        margin: 0;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        overflow: hidden;
+        border: solid;
+        border-width: 2px;
+    }
+
+        .edit-practice .header {
+            height: 30px;
+            padding: 3px;
+            width: 100%;
+            background: var(--menu-header-blue);
+            border-bottom: solid;
+            border-width: 2px;
+        }
+
+        .edit-practice .close-button {
+            float: right;
+        }
+
+        .edit-practice .body {
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+        .edit-practice .date {
+            padding: 5px;
+            font-size: 1em;
+            display: inline-block;
+        }
+
+        .edit-practice .bout-window {
+            background: var(--menu-light-blue);
+            display: inline-block;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            width: 72%;
+            height: var(--butt-height);
+            padding: 5px;
+            margin-top: 5px;
+            font-weight: normal;
+            font-size: .75em;
+            line-height: 1;
+            overflow: hidden;
+        }
+
+            .edit-practice .bout-window .bouts {
+                display: inline-block;
+                font-size: 1.2em;
+                padding-top: 5px;
+            }
+
+            .edit-practice .bout-window .edit {
+                display: inline-block;
+                float: right;
+            }
+
+        .edit-practice .edit-bout-window {
+            display: block;
+            background: var(--menu-light-blue);
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            width: 99%;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-weight: normal;
+            font-size: .75em;
+            line-height: 1;
+            overflow: hidden;
+        }
+
+            .edit-practice .edit-bout-window .bout {
+                display: inline-block;
+                margin: 3px;
+            }
+
+        .edit-practice .add-event {
+            float: right;
+            padding: 5px;
+        }
+
+        .edit-practice .top {
+            display: inline-flex;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .edit-practice .med {
+            background: var(--menu-light-blue);
+            display: inline-block;
+            width: 50%;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .edit-practice .track-container {
+            display: inline-flex;
+            width: 100%;
             margin-bottom: 10px;
         }
-/* #endregion ADMIN */
 
-/* #region HOME */
-.home {
+        .edit-practice .track {
+            background: var(--menu-light-blue);
+            display: inline-block;
+            width: 50%;
+            padding: 5px;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
 
-}
-    .home .header {
-        margin-left: 10px;
+        .edit-practice .notes {
+            width: 100%;
+            font-size: .75em;
+            margin-left: 10px;
+        }
+
+            .edit-practice .notes:disabled {
+                margin-left: 1000px;
+                font-size: 43px;
+            }
+
+        .edit-practice .save {
+            float: right;
+            margin-right: 9px;
+            padding: 5px;
+            margin-top: -5px;
+        }
+
+        .edit-practice .delete {
+            float: right;
+            margin-right: 9px;
+            padding: 5px;
+            margin-top: -5px;
+        }
+
+        .edit-practice .error {
+            font-weight: normal;
+            color: red;
+            display: inline-block;
+            position: absolute;
+            right: 80px;
+            font-size: 13px;
+            width: 250px;
+        }
+
+        .edit-practice .irregular-practice {
+            display: inline-block;
+            font-size: .8em;
+            float: left;
+        }
+
+    @media (max-width: 641px) {
+        .edit-practice .notes {
+            width: 15%;
+            margin-left: 4px;
+        }
+
+        .edit-practice .body {
+            padding: 2px;
+        }
+
+        .edit-practice .med {
+            padding: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .edit-practice .track {
+            padding: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .edit-practice .bout-window {
+            display: inline-block;
+            width: 99%;
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+
+            .edit-practice .bout-window .bouts {
+                display: inline-block;
+                font-size: 0.75em;
+                padding-top: 0px;
+            }
+
+            .edit-practice .bout-window .edit {
+                display: inline-block;
+                float: right;
+                margin-top: -8px;
+                margin-right: 2px;
+            }
+
+        .edit-practice .edit-bout-window {
+            width: 99%;
+            padding: 0px;
+            font-size: 0.7em;
+        }
+
+            .edit-practice .edit-bout-window .bout {
+                display: inline-block;
+                margin: 3px;
+            }
+    }
+    /* #endregion EDITPRACTICE */
+
+    /* #region ADMIN */
+    .admin {
+        background-color: var(--menu-med-blue);
+        padding: 5px;
+    }
+
+        .admin .message {
+            background-color: var(--menu-light-blue);
+            box-shadow: var(--shadow);
+            margin: 10px;
+            height: 30px;
+        }
+
+        .admin .calendar {
+            background-color: var(--menu-light-blue);
+            box-shadow: var(--shadow);
+            width: 98%;
+            margin: 10px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+            .admin .calendar .add-days {
+                box-shadow: var(--shadow);
+                padding: 5px;
+                text-align: center;
+                margin: 10px;
+            }
+
+                .admin .calendar .add-days label {
+                    display: block;
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                .admin .calendar .add-days .buttle {
+                    margin: 10px;
+                }
+
+            .admin .calendar .list {
+                box-shadow: var(--shadow);
+                height: 300px;
+                padding: 5px;
+                margin: 10px;
+                text-align: center;
+            }
+
+                .admin .calendar .list label {
+                    display: block;
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                .admin .calendar .list .input {
+                    height: 200px;
+                    width: 175px;
+                    resize: none;
+                }
+
+                .admin .calendar .list .buttle {
+                    margin: 10px;
+                }
+
+        .admin .log {
+            margin: 10px;
+            padding: 5px;
+            background-color: var(--menu-light-blue);
+            box-shadow: var(--shadow);
+            height: 350px;
+        }
+
+            .admin .log textarea {
+                box-shadow: var(--shadow);
+                resize: none;
+                height: 85%;
+                width: 100%;
+                font-size: .75em;
+            }
+
+            .admin .log .buttle {
+                margin-bottom: 10px;
+            }
+    /* #endregion ADMIN */
+
+    /* #region HOME */
+    .home {
+    }
+
+        .home .header {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .home .buttle {
+            margin: 10px;
+        }
+    /* #endregion HOME */
+
+    /* #region UPDATEMEMBER */
+    .update-member {
+        padding: 0px; /*inner*/
+        border-radius: var(--calendar-radius);
+        background: var(--menu-med-blue);
+        margin: 0;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        overflow: hidden;
+        border: solid;
+        border-width: 2px;
+        max-width: 400px;
+    }
+
+        .update-member .header {
+            height: 30px;
+            padding: 3px;
+            width: 100%;
+            background: var(--menu-header-blue);
+            border-bottom: solid;
+            border-width: 2px;
+        }
+
+        .update-member .close-button {
+            float: right;
+        }
+
+        .update-member .body {
+            background: var(--menu-light-blue);
+            display: inline-block;
+            width: 98%;
+            padding: 5px;
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            margin: 5px;
+        }
+
+        .update-member .input-text {
+            border: solid;
+            border-width: 2px;
+            border-radius: var(--calendar-radius);
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        .update-member .label {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .update-member .check-label {
+            width: 10%;
+            display: flex;
+        }
+
+        .update-member .buttle {
+            float: right;
+            margin-right: 0px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        .update-member .buttle-left {
+            float: left;
+            margin-right: 0px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        .update-member .help {
+            font-weight: normal;
+            font-size: .75em;
+        }
+    /* #endregion UPDATEMEMBER */
+    /* #region ATTENDANCE */
+    .attendance-sign-in-container {
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 2px;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
         font-weight: bold;
         font-size: 1.5em;
     }
-    .home .buttle {
-        margin: 10px;
-    }
-/* #endregion HOME */
 
-/* #region UPDATEMEMBER */
-.update-member {
-    padding: 0px; /*inner*/
-    border-radius: var(--calendar-radius);
-    background: var(--menu-med-blue);
-    margin: 0;
-    margin-bottom: 10px;
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    overflow: hidden;
-    border: solid;
-    border-width: 2px;
-    max-width: 400px;
-}
-    .update-member .header {
-        height: 30px;
-        padding: 3px;
-        width: 100%;
-        background: var(--menu-header-blue);
-        border-bottom: solid;
-        border-width: 2px;
-    }
-    .update-member .close-button {
-        float: right;
-    }
-    .update-member .body {
-        background: var(--menu-light-blue);
-        display: inline-block;
-        width: 98%;
-        padding: 5px;
+        .attendance-sign-in-container button {
+            margin: 10px;
+            font-weight: normal;
+            font-size: .75em;
+        }
+
+    .attendance-missed-sign-in-container {
+        border-radius: var(--calendar-radius);
         border: solid;
         border-width: 2px;
-        border-radius: var(--calendar-radius);
-        margin: 5px;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1em;
+        display: grid;
     }
-    .update-member .input-text {
+
+        .attendance-missed-sign-in-container button {
+            float: right;
+        }
+
+    .attendance-grid-container {
+        border-radius: var(--calendar-radius);
         border: solid;
         border-width: 2px;
-        border-radius: var(--calendar-radius);
-        width: 70%;
-        box-sizing: border-box;
-    }
-    .update-member .label {
-        box-sizing: border-box;
-        width: 100%;
-    }
-    .update-member .check-label {
-        width: 10%;
-        display: flex;
-    }
-    .update-member .buttle {
-        float: right;
-        margin-right: 0px;
-        padding: 5px;
-        margin-top: 5px;
-    }
-    .update-member .buttle-left {
-        float: left;
-        margin-right: 0px;
-        padding: 5px;
-        margin-top: 5px;
-    }
-    .update-member .help {
-        font-weight: normal;
-        font-size: .75em;
-    }
-/* #endregion UPDATEMEMBER */
-/* #region ATTENDANCE */
-.attendance-sign-in-container {
-    border-radius: var(--calendar-radius);
-    border: solid;
-    border-width: 2px;
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-    .attendance-sign-in-container button {
+        padding: 10px;
         margin: 10px;
-        font-weight: normal;
-        font-size: .75em;
+        width: fit-content;
     }
-.attendance-missed-sign-in-container {
-    border-radius: var(--calendar-radius);
-    border: solid;
-    border-width: 2px;
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1em;
-    display: grid;
-}
-.attendance-missed-sign-in-container button {
-    float: right;
-}
 
-.attendance-grid-container {
-    border-radius: var(--calendar-radius);
-    border: solid;
-    border-width: 2px;
-    padding: 10px;
-    margin: 10px;
-    width: fit-content;
-}
-
-.attendance-drop-container {
-    display: block;
-    margin: 1px;
-    width: 100%;
-    font-size: 1em;
-}
-
-.attendance-drop {
-    text-align: center;
-    padding: 0px;
-    margin-left: 0px;
-    border-radius: var(--calendar-radius);
-    border: solid;
-    border-width: 2px;
-    float: left;
-    width: 85%;
-    /* for Firefox */
-    -moz-appearance: none;
-    /* for Safari, Chrome, Opera */
-    -webkit-appearance: none;
-}
-
-.attendance-drop-item {
-}
-
-.attendance-drop-outcome {
-    float: left;
-    width: 10%;
-    margin-left: 2px;
-}
-
-@media (max-width: 641px) {
-    .attendance-dropdown-container {
-        padding: 0px;
-        font-size: 11px;
+    .attendance-drop-container {
+        display: block;
+        margin: 1px;
+        width: 100%;
+        font-size: 1em;
     }
 
     .attendance-drop {
-        padding: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-        width: 95%;
+        text-align: center;
+        padding: 0px;
+        margin-left: 0px;
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 2px;
+        float: left;
+        width: 85%;
+        /* for Firefox */
+        -moz-appearance: none;
+        /* for Safari, Chrome, Opera */
+        -webkit-appearance: none;
     }
-}
+
+    .attendance-drop-item {
+    }
+
+    .attendance-drop-outcome {
+        float: left;
+        width: 10%;
+        margin-left: 2px;
+    }
+
+    @media (max-width: 641px) {
+        .attendance-dropdown-container {
+            padding: 0px;
+            font-size: 11px;
+        }
+
+        .attendance-drop {
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 11px;
+            width: 95%;
+        }
+    }
 
     /* #endregion ATTENDANCE */
-/* #region HELP */
-.help-container {
-    border-radius: var(--calendar-radius);
-    border: solid;
-    border-width: 2px;
-    margin: 10px;
-    padding: 10px;
-}
-/* #endregion HELP */
+    /* #region HELP */
+    .help-container {
+        border-radius: var(--calendar-radius);
+        border: solid;
+        border-width: 2px;
+        margin: 10px;
+        padding: 10px;
+    }
+    /* #endregion HELP */
