@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HARDUtility",
   "resources": {
-    "hash": "sha256-1kM70kZ1ro9xgLr7EG0kXVfM2gqFx12uhxYwc91nadc=",
+    "hash": "sha256-m4becZwAV4KzJlR7hK0CCrHAGds2xVgdH9VW45loH0E=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -92,7 +92,7 @@
       "System.wasm": "sha256-jXhnUNHzjjL7Plo7WcHuX7V5Dc/Umt+qmGGC+Js76SE=",
       "netstandard.wasm": "sha256-Owplq8B/mKxhd/4Rl6Z7GDHbu1dpL8GpXhG6H7ISSn0=",
       "System.Private.CoreLib.wasm": "sha256-dyTqQ3qBdgnhv7H4MsRT8UcTtP2eCsGHb3Ud5ivF1f0=",
-      "HARDUtility.wasm": "sha256-hsI0Ndp108zjxaUZVE/AQlD5Or8DC9KjKhmiCysK1qU="
+      "HARDUtility.wasm": "sha256-GKarPNNyZS60vnLBOHh2ZT7Q9qJrdl7Y/lpwCYBPRRA="
     }
   },
   "cacheBootResources": true,
