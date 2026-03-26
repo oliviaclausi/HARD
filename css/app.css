@@ -486,7 +486,7 @@ code {
             }
 
             .calendar-day .item .bout {
-                background: repeating-linear-gradient( 45deg, var(--banshees), var(--banshees) 10px, var(--scrimmage) 10px, var(--scrimmage) 20px );
+                background: repeating-linear-gradient( 45deg, #ffffff, var(--banshees) 10px, var(--menu-light-blue) 10px, var(--menu-light-blue) 20px );
             }
 
         .calendar-day .notification {
@@ -526,7 +526,7 @@ code {
     }
 
         .calendar-key .calendar-day {
-            height: 210px;
+            height: 230px;
             width: 50%;
         }
 
